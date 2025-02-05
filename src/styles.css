@@ -13,7 +13,18 @@ body {
   background: var(--primary-background-color) ;
 }
 
+textarea:focus, input:focus, button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
 .container {
   width: 350px;
   margin: 50px auto;
+}
+
+ul {
+  list-style: none;
 }
