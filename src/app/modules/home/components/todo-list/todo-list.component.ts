@@ -9,11 +9,7 @@ import { TaskList } from '../../model/task-list';
   styleUrl: './todo-list.component.css'
 })
 export class TodoListComponent {
-  public taskList: Array<TaskList> = [
-    { task: 'Task 1', checked: true },
-    { task: 'Task 2', checked: false },
-    { task: 'Task 3', checked: true },
-  ];
+  public taskList: Array<TaskList> = [];
 
   public deleteItemTaskList(event: number): void {
     this.taskList.splice(event, 1);
@@ -27,5 +23,9 @@ export class TodoListComponent {
     }
     
     this.taskList = []; 
+  }
+
+  public setEmitItemTaskList(event: string): void {
+    this.taskList.push({ task: event, checked: false });
   }
 }
