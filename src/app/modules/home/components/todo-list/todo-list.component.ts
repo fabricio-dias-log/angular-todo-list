@@ -15,4 +15,17 @@ export class TodoListComponent {
     { task: 'Task 3', checked: true },
   ];
 
+  public deleteItemTaskList(event: number): void {
+    this.taskList.splice(event, 1);
+  }
+
+  public deleteAllTaskList(): void {
+    const confirm = window.confirm("Are you sure you want to delete all tasks?");
+
+    if (!confirm) {
+      return;
+    }
+    
+    this.taskList = []; 
+  }
 }
